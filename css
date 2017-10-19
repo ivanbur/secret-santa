@@ -1,0 +1,9 @@
+button {
+  width: 100px;
+  left: 100px;
+  position: absolute;
+}
+
+html {
+  background-color: #00ffd8;
+}
