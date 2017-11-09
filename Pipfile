@@ -5,7 +5,7 @@ name = "pypi"
 
 [requires]
 python_version = "3.6"
-gunicorn = "==0.14.2"
+gunicorn = "0.14.2"
 
 [dev-packages]
 gunicorn = "*"
