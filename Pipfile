@@ -11,3 +11,6 @@ gunicorn = "0.14.2"
 
 [packages]
 "bob-builder" = "==0.0.13"
+gunicorn = "*"
+psycopg2 = "*"
+whitenoise = "*"
