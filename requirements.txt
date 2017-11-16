@@ -1,1 +1,1 @@
-gunicorn==0.14.6
+gunicorn==19.7.1
