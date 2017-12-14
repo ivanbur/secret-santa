@@ -28,7 +28,7 @@ $(document).ready(function() {
     console.log(randomNames);
 
     for (var j = 0; j < randomNames.length; j++) {
-      if (j != 8) {
+      if (j != (randomNames.length - 1) ) {
         console.log(randomNames[j] + "-" + randomNames[j + 1]);
       } else {
         console.log(randomNames[8] + "-" + randomNames[0]);
@@ -44,15 +44,15 @@ $(document).ready(function() {
 
   function sendMail() {
 
+    for (var k = 0; k < randomNames.length; k++) {
+      emailjs.send("default_service","secret_santa",{
+        email: randomNames[k], 
+        bodyText: randomNames[k]
+      });
+    }
+
     console.log("hi")
-    var link = "mailto:ivan@burgert.com"
-      + "?cc=blah@blah.com"
-      + "&subject=" + escape("Your secret santa")
-      + "&body=" + escape(randomNames[1])
-    ;
-    window.location.href = link;
-
+    
   }
-
 
 });
