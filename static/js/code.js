@@ -31,7 +31,7 @@ $(document).ready(function() {
       if (j != (randomNames.length - 1) ) {
         console.log(randomNames[j] + "-" + randomNames[j + 1]);
       } else {
-        console.log(randomNames[8] + "-" + randomNames[0]);
+        console.log(randomNames[j] + "-" + randomNames[0]);
       }
     }
 
@@ -40,15 +40,22 @@ $(document).ready(function() {
 
   function randomArrayNumber() {
     return Math.floor(Math.random() * allNames.length);
+    console.log(allNames.length);
   }
 
   function sendMail() {
-
     for (var k = 0; k < randomNames.length; k++) {
-      emailjs.send("default_service","secret_santa",{
-        email: randomNames[k], 
-        bodyText: randomNames[k]
-      });
+      if (k != (randomNames.length - 1) ) {
+          emailjs.send("default_service","secret_santa",{
+          email: randomNames[k], 
+          bodyText: randomNames[k + 1]
+        });
+      } else {
+        emailjs.send("default_service","secret_santa",{
+          email: randomNames[k], 
+          bodyText: randomNames[0]
+        });
+      }
     }
 
     console.log("hi")
