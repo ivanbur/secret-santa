@@ -2,36 +2,25 @@ $(document).ready(function() {
 
   var randomNames = [];
   var allNames = [];
-  var amountOfPeople = prompt("How many people are participating?");
+  var amountOfPeople = "";
+  
 
 
-  $("numberOfPeopleButton").click(function() {
+  $("#numberOfPeopleButton").click(function() {
+    amountOfPeople = prompt("How many people are participating?");
+
     for (var i = 1; i <= amountOfPeople; i++) {
-        $("body").append("
-            <br/>
-            <input id = 'text" + i + "' type = 'text' />
-            <br/>")
+        $("body").append("<br/>Person " + i + "\'s email: <input id = 'text" + i + "' type = 'text' /><br/>")
     }
 
     $("button").remove();
-    $("body").append("<button id = 'enterButton' type = 'button'>Enter</button>")
+    $("body").append("<br/><button id = 'enterButton' type = 'button'>Enter</button>")
   });
 
 
   $("#enterButton").click(function() {
     randomNames = [];
     allNames = [];
-    // allNames = [
-    //   $("#text1").val(),
-    //   $("#text2").val(),
-    //   $("#text3").val(),
-    //   $("#text4").val(),
-    //   $("#text5").val(),
-    //   $("#text6").val(),
-    //   $("#text7").val(),
-    //   $("#text8").val(),
-    //   $("#text9").val()
-    // ];
 
     for (var names = 1; names <= amountOfPeople; names++) {
       allNames.push($("#text" + names).val());
@@ -77,8 +66,6 @@ $(document).ready(function() {
         });
       }
     }
-
-    console.log("hi")
     
   }
 
