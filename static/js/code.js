@@ -2,20 +2,40 @@ $(document).ready(function() {
 
   var randomNames = [];
   var allNames = [];
+  var amountOfPeople = prompt("How many people are participating?");
+
+
+  $("numberOfPeopleButton").click(function() {
+    for (var i = 1; i <= amountOfPeople; i++) {
+        $("body").append("
+            <br/>
+            <input id = 'text" + i + "' type = 'text' />
+            <br/>")
+    }
+
+    $("button").remove();
+    $("body").append("<button id = 'enterButton' type = 'button'>Enter</button>")
+  });
+
 
   $("#enterButton").click(function() {
     randomNames = [];
-    allNames = [
-      $("#text1").val(),
-      $("#text2").val(),
-      $("#text3").val(),
-      $("#text4").val(),
-      $("#text5").val(),
-      $("#text6").val(),
-      $("#text7").val(),
-      $("#text8").val(),
-      $("#text9").val()
-    ];
+    allNames = [];
+    // allNames = [
+    //   $("#text1").val(),
+    //   $("#text2").val(),
+    //   $("#text3").val(),
+    //   $("#text4").val(),
+    //   $("#text5").val(),
+    //   $("#text6").val(),
+    //   $("#text7").val(),
+    //   $("#text8").val(),
+    //   $("#text9").val()
+    // ];
+
+    for (var names = 1; names <= amountOfPeople; names++) {
+      allNames.push($("#text" + names).val());
+    }
 
     for (var i = 0; i < 9; i++) {
       var arrayNumber = randomArrayNumber();
