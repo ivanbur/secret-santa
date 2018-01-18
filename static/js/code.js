@@ -1,6 +1,6 @@
 var randomNames = [];
 var allNames = [];
-var amountOfPeople = 0;
+var amountOfPeople = 1;
 
 function enterButton() {
   console.log("hey");
@@ -61,8 +61,12 @@ function sendMail() {
 
 $(document).ready(function() {
 
+
+
   $("#numberOfPeopleButton").click(function() {
-    amountOfPeople = prompt("How many people are participating?");
+    do {
+      amountOfPeople = prompt("How many people are participating?");
+    } while (amountOfPeople <= 0 || amountOfPeople > 20 || isNaN(amountOfPeople))
 
     for (var i = 1; i <= amountOfPeople; i++) {
         $("body").append("<br/>Person " + i + "\'s email: <input id = 'text" + i + "' type = 'text' /><br/>")
