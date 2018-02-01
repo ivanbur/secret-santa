@@ -24,8 +24,5 @@ div {
 }
 
 #numberOfPeopleButton {
-	width: 6%;
-	height: 6%;
+	font-size: 100%;
 }
-
-#textInsideButton { font-size: 1050px; }
