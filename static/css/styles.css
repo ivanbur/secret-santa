@@ -22,3 +22,10 @@ div {
 #sentMessage {
 	color: red;
 }
+
+#numberOfPeopleButton {
+	width: 6%;
+	height: 6%;
+}
+
+#textInsideButton { font-size: 1050px; }
