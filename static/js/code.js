@@ -57,7 +57,9 @@ function sendMail() {
 
 function displaySent() {
   $("button").remove();
-  $("body").append("<br/><h1 font-family = 'Verdana' style = 'text-align:center'>Sent!</h1>")
+  $("div").remove();
+  $("br").remove();
+  $("body").append("<br/><h1 font-family = 'Verdana' style = 'text-align:center' id = 'sentMessage'>Sent!</h1>")
 }
 
 

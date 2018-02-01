@@ -18,3 +18,7 @@ div {
 	margin: auto;
 	left: 45vw;
 }
+
+#sentMessage {
+	color: red;
+}
