@@ -7,6 +7,10 @@ button {
 
 html {
   background-color: #00ffd8;
+  background-image: url("../images/santa-reindeer.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 30vw;
 }
 
 div {
